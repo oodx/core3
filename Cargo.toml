@@ -1,0 +1,25 @@
+[package]
+name = "core3"
+version = "0.1.2"
+edition = "2021"
+rust-version = "1.81"
+description = "The bare essentials of std::io for use in no_std. Drop-in successor to core2. core2 alternative with some additional utils."
+license = "Apache-2.0 OR MIT"
+repository = "https://github.com/oodx/core3"
+categories = ["no-std", "embedded"]
+keywords = ["io", "no_std", "read", "write", "core2"]
+publish = true
+
+[dependencies]
+memchr = { version = "2", default-features = false }
+
+[features]
+default = ["std", "utils"]
+std = ["alloc"]
+alloc = []
+utils = []
+
+[workspace]
+
+[package.metadata.docs.rs]
+all-features = true
